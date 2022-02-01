@@ -16,8 +16,10 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "koa-body": "^4.2.0",
     "koa-router": "^10.1.1",
     "koa2": "^2.0.0-alpha.7",
+    "koa2-cors": "^2.0.6",
     "mongodb": "^4.3.1",
     "mysql": "^2.18.1"
   },

@@ -2,12 +2,14 @@ const Router = require("koa-router");
 
 const people = new Router();
 
-people.get("/", async (ctx) => {
-  ctx.body = "人类";
-});
+people.post("/", async (ctx) => {});
 
-people.get("/boy", async (ctx) => {
-  ctx.body = "男孩";
+people.post("/boy", async (ctx) => {
+  const { name, address } = ctx.request.body;
+  ctx.body = {
+    name,
+    address,
+  };
 });
 
 people.get("/girl", async (ctx) => {
