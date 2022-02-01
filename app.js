@@ -11,7 +11,7 @@ const app = new Koa()
 app.use(cors());
 // 解析post请求参数
 app.use(koaBody({
-  
+
 }))
 
 // 使用中间件
