@@ -18,10 +18,6 @@ connection.connect((err)=> {
   }
   console.log('数据库启动成功!');
 });
-// connection.query("SELECT * FROM user", function (error, results) {
-//   if (error) throw error;
-//   console.log("数据库连接成功", results);
-// });
 
 // 导出
 module.exports = connection;

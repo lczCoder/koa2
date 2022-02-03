@@ -1,5 +1,6 @@
 const Router = require("koa-router");
 const db = require("../db");
+const path = require('path');
 
 const people = new Router();
 
@@ -29,5 +30,11 @@ people.post("/girl", async (ctx) => {
     age
   };
 });
+
+people.post('/file',async (ctx)=>{
+  const file = ctx.request.files.imgs;
+  const basename = path.basename(file.path);
+  ctx.body = { url: `${ctx.origin}/uploads/${basename}` };
+})
 
 module.exports = people;
