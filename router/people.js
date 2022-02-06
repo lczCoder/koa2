@@ -37,4 +37,5 @@ people.post('/file',async (ctx)=>{
   ctx.body = { url: `${ctx.origin}/uploads/${basename}` };
 })
 
+
 module.exports = people;
